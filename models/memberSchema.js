@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 
 const memeberSchema = mongoose.Schema({
     name: { type: String },
-    userName: { type: String },
     email: { type: String },
     bio: { type: String },
     memberPic: { type: String },

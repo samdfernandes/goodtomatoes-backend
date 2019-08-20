@@ -36,6 +36,21 @@ mongoose.connection.once('open', () => {
     console.log('connected to mongoose...')
 })
 
+// SEED ROUTE ////////////////////////////////////
+const seed = require('./controllers/seedMember')
+
+///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done. 
+// const memberSeed = require('./models/memberSchema')
+
+app.get('/seedMembers', (req, res) => {
+    memberSeed.create(seed, (err, createdMembers) => {
+        console.log(createdMembers)
+        res.redirect('/')
+    })
+})
+
+/////////////////////////////////////////////////
+
 //listener
 app.listen(PORT, () => {
     console.log('LISTENING')

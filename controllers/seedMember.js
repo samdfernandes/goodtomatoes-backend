@@ -1,6 +1,5 @@
 
-app.get('/seedmember', (req, res) => {
-    Member.create([
+let seedMembers = [
         {
             name: 'Member 1',
             email: 'email@emailaddress.com',
@@ -42,7 +41,6 @@ app.get('/seedmember', (req, res) => {
             needs: ['clothes', 'food']
         },
 
-    ], (err, data) => {
-        res.redirect('/');
-    })
-});
+    ]
+
+    module.exports = seedMembers;

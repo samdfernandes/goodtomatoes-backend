@@ -1,6 +1,6 @@
 const express = require('express')
 const members = express.Router();
-const Members = require('../models/data.js')
+const Members = require('../models/memberSchema.js')
 
 //index
 members.get('/', (req, res) => {

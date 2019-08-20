@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
 const PORT = 3003;
+const cors = require('cors')
 
 //cors
 const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']

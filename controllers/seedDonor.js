@@ -1,5 +1,4 @@
-app.get('/seeddonor', (req, res) => {
-    Donor.create([
+let seedDonors = [
         {
             name: 'Donor 1',
             email: 'email@emailaddress.com'
@@ -18,7 +17,7 @@ app.get('/seeddonor', (req, res) => {
         },
 
 
-    ], (err, data) => {
-        res.redirect('/');
-    })
-});
+    ]
+
+    module.exports = seedDonors;
+

@@ -1,22 +1,23 @@
 {
-  "name": "homelesshelper",
+  "name": "homelesshelper-backend",
   "version": "1.0.0",
   "description": "Homeless Helper App",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samdfernandes/homelesshelper.git"
+    "url": "git+https://github.com/samdfernandes/homelesshelper-backend.git"
   },
   "keywords": [],
   "author": "Sam Fernandes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samdfernandes/homelesshelper/issues"
+    "url": "https://github.com/samdfernandes/homelesshelper-backend/issues"
   },
-  "homepage": "https://github.com/samdfernandes/homelesshelper#readme",
+  "homepage": "https://github.com/samdfernandes/homelesshelper-backend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",

@@ -13,8 +13,8 @@
 
 An App built by:
 
-Corey Morrison
-David Carrano
-Gary  Beaumont
-Samantha Fernandes
+* Corey Morrison
+* David Carrano
+* Gary  Beaumont
+* Samantha Fernandes
 

@@ -28,7 +28,8 @@ app.use(cors());
 
 app.use(express.json());
 app.use('/members', membersController);
-app.use('/donors', donorsController)
+app.use('/donors', donorsController);
+
 
 //mongoose connections
 mongoose.connection.on('error', err =>

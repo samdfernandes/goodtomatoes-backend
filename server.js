@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
+const donorsController = require('./controllers/donors');
 const PORT = 3003;
 const cors = require('cors');
 
@@ -27,6 +28,7 @@ app.use(cors());
 
 app.use(express.json());
 app.use('/members', membersController);
+app.use('/donors', donorsController);
 
 //mongoose connections
 mongoose.connection.on('error', err =>

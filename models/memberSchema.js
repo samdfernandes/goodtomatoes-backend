@@ -4,9 +4,8 @@ const memberSchema = mongoose.Schema({
     name: { type: String },
     email: { type: String },
     friends: [{ type: String }],
-    likes: [{ type: String }],
-    reviews: [{ type: String }],
-    password: { type: String, require: true }
+    password: { type: String, require: true },
+    picture: { type: String }
 })
 
 module.exports = mongoose.model('Member', memberSchema)

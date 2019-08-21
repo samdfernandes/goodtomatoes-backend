@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
-const donorsController =require('./controllers/donors')
+const donorsController = require('./controllers/donors');
 const PORT = 3003;
 const cors = require('cors');
 
@@ -30,7 +30,6 @@ app.use(express.json());
 app.use('/members', membersController);
 app.use('/donors', donorsController);
 
-
 //mongoose connections
 mongoose.connection.on('error', err =>
   console.log(err.message + ' is Mongod not running?')
@@ -48,9 +47,9 @@ mongoose.connection.once('open', () => {
 const seed = require('./controllers/seedMember');
 const seed2 = require('./controllers/seedDonor');
 
-///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done. 
-const memberSeed = require('./models/memberSchema')
-const donorSeed = require('./models/donorSchema')
+///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done.
+const memberSeed = require('./models/memberSchema');
+const donorSeed = require('./models/donorSchema');
 
 //seeds the members
 app.get('/seedMembers', (req, res) => {

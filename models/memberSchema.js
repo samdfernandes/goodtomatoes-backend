@@ -11,8 +11,5 @@ const memberSchema = mongoose.Schema({
     needs: [{ type: String }]
 })
 
-
-
-
 module.exports = mongoose.model('Member', memberSchema)
 

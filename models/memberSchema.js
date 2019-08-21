@@ -6,6 +6,7 @@ const memberSchema = mongoose.Schema({
     friends: [{ type: String }],
     likes: [{ type: String }],
     reviews: [{ type: String }],
+    password: { type: String, require: true }
 })
 
 module.exports = mongoose.model('Member', memberSchema)

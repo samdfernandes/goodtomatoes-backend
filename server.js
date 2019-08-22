@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
+const reviewsController = require('./controllers/reviews')
 const PORT = 3003;
 const cors = require('cors');
 
@@ -39,7 +40,7 @@ mongoose.connection.once('open', () => {
 });
 
 // SEED ROUTE ////////////////////////////////////
-const seed = require('./controllers/seedMember');
+const seed = require('./controllers/seedReviews');
 
 ///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done.
 const memberSeed = require('./models/memberSchema');
@@ -48,6 +49,14 @@ const memberSeed = require('./models/memberSchema');
 app.get('/seedMembers', (req, res) => {
   memberSeed.create(seed, (err, createdMembers) => {
     console.log(createdMembers);
+    res.redirect('/');
+  });
+});
+
+//seeds the reviews
+app.get('/seedReviews', (req, res) => {
+  memberSeed.create(seed, (err, createdReviews) => {
+    console.log(createdReviews);
     res.redirect('/');
   });
 });

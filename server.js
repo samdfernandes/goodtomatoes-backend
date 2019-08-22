@@ -42,7 +42,7 @@ mongoose.connection.once('open', () => {
 const seed = require('./controllers/seedMember');
 
 ///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done.
-// const memberSeed = require('./models/memberSchema');
+const memberSeed = require('./models/memberSchema');
 
 //seeds the members
 app.get('/seedMembers', (req, res) => {

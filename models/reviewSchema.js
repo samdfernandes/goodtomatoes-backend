@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 
 const reviewSchema = mongoose.Schema({
-  createdBy: { type: String, required: true },
+  createdByID: { type: String, required: true },
+  imdbID: { type: String },
   title: { type: String, required: true },
   rating: { type: Number, min: 1, max: 5, required: true },
   reviewNotes: { type: String }

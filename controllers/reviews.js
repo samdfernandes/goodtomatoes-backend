@@ -1,6 +1,6 @@
 const express = require('express');
 const reviews = express.Router();
-const Reviews = require('../models/reviewSchema.js');
+const Reviews = require('../models/reviewSchema');
 
 //Get By ID
 reviews.get('/:id', (req, res) => {

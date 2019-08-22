@@ -36,6 +36,7 @@ mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 mongoose.connect('mongodb://localhost:27017/members', {
   useNewUrlParser: true
 });
+
 mongoose.connection.once('open', () => {
   console.log('connected to mongoose...');
 });
@@ -45,6 +46,7 @@ const seed = require('./controllers/seedReviews');
 
 ///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done.
 const memberSeed = require('./models/memberSchema');
+const reviewSeed = require('./models/reviewSchema')
 
 //seeds the members
 app.get('/seedMembers', (req, res) => {
@@ -56,7 +58,7 @@ app.get('/seedMembers', (req, res) => {
 
 //seeds the reviews
 app.get('/seedReviews', (req, res) => {
-  memberSeed.create(seed, (err, createdReviews) => {
+  reviewSeed.create(seed, (err, createdReviews) => {
     console.log(createdReviews);
     res.redirect('/');
   });

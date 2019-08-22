@@ -1,4 +1,4 @@
-# homelesshelper
+# Good Tomatoes
 
 ## Home Page
 ![wireframing Main Page](https://github.com/samdfernandes/goodtomatoes-backend/blob/master/images/Screen%20Shot%202019-08-21%20at%2012.39.13%20PM.png)

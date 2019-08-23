@@ -2,16 +2,6 @@ const express = require('express');
 const reviews = express.Router();
 const Reviews = require('../models/reviewSchema');
 
-//Get By ID
-reviews.get('/:id', (req, res) => {
-  Members.find({}, (err, foundMembers) => {
-    if (err) {
-      res.status(400).json({ error: err.message });
-    }
-    res.status(200).json(foundMembers);
-  });
-});
-
 //index
 reviews.get('/', (req, res) => {
   Reviews.find({}, (err, foundReviews) => {
@@ -21,6 +11,28 @@ reviews.get('/', (req, res) => {
     res.status(200).json(foundReviews);
   });
 });
+
+//Get By userID
+reviews.get('/byUser/:id', (req, res) => {
+  Reviews.find({createdByID: req.params.id}, (err, foundReviews) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+    }
+    res.status(200).json(foundReviews);
+  });
+});
+
+//Get By imdbID
+reviews.get('/:id', (req, res) => {
+  Reviews.find({imdbID: req.params.id}, (err, foundReviews) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+    }
+    res.status(200).json(foundReviews);
+  });
+});
+
+
 
 //create
 reviews.post('/', (req, res) => {

@@ -2,8 +2,10 @@ const express = require('express');
 const members = express.Router();
 const Members = require('../models/memberSchema.js');
 
-//Get By ID
-members.get('/:id', (req, res) => {
+
+
+//index
+members.get('/', (req, res) => {
   Members.find({}, (err, foundMembers) => {
     if (err) {
       res.status(400).json({ error: err.message });
@@ -12,8 +14,8 @@ members.get('/:id', (req, res) => {
   });
 });
 
-//index
-members.get('/', (req, res) => {
+//Get By ID
+members.get('/:id', (req, res) => {
   Members.find({}, (err, foundMembers) => {
     if (err) {
       res.status(400).json({ error: err.message });

@@ -25,6 +25,7 @@ let seedMembers = [
   }
 ];
 
+
 module.exports = seedMembers;
 
 // Create a reviews model

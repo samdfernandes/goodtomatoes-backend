@@ -12,6 +12,16 @@ reviews.get('/', (req, res) => {
   });
 });
 
+//Get By userID
+reviews.get('/byUser/:id', (req, res) => {
+  Reviews.find({createdByID: req.params.id}, (err, foundReviews) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+    }
+    res.status(200).json(foundReviews);
+  });
+});
+
 //Get By imdbID
 reviews.get('/:id', (req, res) => {
   Reviews.find({imdbID: req.params.id}, (err, foundReviews) => {
@@ -22,15 +32,7 @@ reviews.get('/:id', (req, res) => {
   });
 });
 
-//Get By userID
-reviews.get('/:id', (req, res) => {
-  Reviews.find({_id: req.params.id}, (err, foundReviews) => {
-    if (err) {
-      res.status(400).json({ error: err.message });
-    }
-    res.status(200).json(foundReviews);
-  });
-});
+
 
 //create
 reviews.post('/', (req, res) => {

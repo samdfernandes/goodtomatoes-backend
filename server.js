@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
 const reviewsController = require('./controllers/reviews');
-const userController = require('./controllers/user')
+
 const PORT = 3003;
 const cors = require('cors');
 
@@ -29,6 +29,7 @@ app.use('/members', membersController);
 app.use('/reviews', reviewsController);
 app.use('/users', userController);
 
+
 //mongoose connections
 mongoose.connection.on('error', err =>
   console.log(err.message + ' is Mongod not running?')
@@ -44,13 +45,12 @@ mongoose.connection.once('open', () => {
 });
 
 // SEED ROUTE ////////////////////////////////////
-const seed1 = require('./controllers/seedMember')
+const seed1 = require('./controllers/seedMember');
 const seed = require('./controllers/seedReviews');
 
-
 ///// Uncomment the line below this to seed the data from the seedMember file. Then go to /seedMembers. Comment out line when done.
-// const memberSeed = require('./models/memberSchema');
-const reviewSeed = require('./models/reviewSchema')
+const memberSeed = require('./models/memberSchema');
+const reviewSeed = require('./models/reviewSchema');
 
 //seeds the members
 app.get('/seedMembers', (req, res) => {

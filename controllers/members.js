@@ -14,9 +14,9 @@ members.get('/', (req, res) => {
   });
 });
 
-//Get By Email
-members.get('/email/:email', (req, res) => {
-  Members.find({email:req.params.email}, (err, foundMembers) => {
+//Get By Password
+members.get('/password/:password', (req, res) => {
+  Members.find({password:req.params.password}, (err, foundMembers) => {
     if (err) {
       res.status(400).json({ error: err.message });
     }

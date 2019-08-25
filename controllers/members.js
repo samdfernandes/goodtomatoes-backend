@@ -17,6 +17,7 @@ members.get('/', (req, res) => {
 //Get By Email
 members.get('/email/:email', (req, res) => {
   Members.find({email:req.params.email}, (err, foundMembers) => {
+    console.log(foundMembers)
     if (err) {
       res.status(400).json({ error: err.message });
     }

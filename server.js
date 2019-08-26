@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
 const reviewsController = require('./controllers/reviews');
-const userController = require('./controllers/user')
+
 const cors = require('cors');
 
 const PORT = process.env.PORT || 3003;

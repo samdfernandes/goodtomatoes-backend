@@ -1,7 +1,7 @@
 {
-  "name": "homelesshelper-backend",
+  "name": "goodtomatoes-backend",
   "version": "1.0.0",
-  "description": "Homeless Helper App",
+  "description": "Good Tomatoes backend App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samdfernandes/homelesshelper-backend.git"
+    "url": "git+https://github.com/samdfernandes/goodtomatoes-backend.git"
   },
   "keywords": [],
   "author": "Sam Fernandes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samdfernandes/homelesshelper-backend/issues"
+    "url": "https://github.com/samdfernandes/goodtomatoes-backend/issues"
   },
-  "homepage": "https://github.com/samdfernandes/homelesshelper-backend#readme",
+  "homepage": "https://github.com/samdfernandes/goodtomatoes-backend#readme",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "cors": "^2.8.5",

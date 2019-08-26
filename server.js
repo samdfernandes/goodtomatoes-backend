@@ -8,7 +8,7 @@ const reviewsController = require('./controllers/reviews');
 const userController = require('./controllers/user')
 const cors = require('cors');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3003;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/members'
 
 //cors

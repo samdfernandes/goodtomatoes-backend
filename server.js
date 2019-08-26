@@ -6,8 +6,10 @@ const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
 const reviewsController = require('./controllers/reviews');
 const userController = require('./controllers/user')
-const PORT = 3003;
 const cors = require('cors');
+
+const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/members'
 
 //cors
 const whitelist = ['http://localhost:3000', 'http://good_tomatoes.surge.sh/'];
@@ -35,7 +37,7 @@ mongoose.connection.on('error', err =>
 );
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-mongoose.connect('mongodb://localhost:27017/members', {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true
 });
 

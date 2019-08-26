@@ -5,10 +5,13 @@ const app = express();
 const mongoose = require('mongoose');
 const membersController = require('./controllers/members');
 const reviewsController = require('./controllers/reviews');
+const userController = require('./controllers/user');
+
 const cors = require('cors');
 
 const PORT = process.env.PORT || 3003;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/members'
+const MONGODB_URI =
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/members';
 
 //cors
 const whitelist = ['http://localhost:3000', 'http://good_tomatoes.surge.sh/'];
@@ -29,7 +32,6 @@ app.use(express.json());
 app.use('/members', membersController);
 app.use('/reviews', reviewsController);
 app.use('/users', userController);
-
 
 //mongoose connections
 mongoose.connection.on('error', err =>

@@ -35,7 +35,7 @@ reviews.get('/:id', (req, res) => {
 
 
 //create
-reviews.post('/', (req, res) => {
+reviews.post('/new', (req, res) => {
   Reviews.create(req.body, (error, createdReview) => {
     if (error) {
       res.status(400).json({ error: error.message });
@@ -43,6 +43,7 @@ reviews.post('/', (req, res) => {
     res.status(200).send(createdReview);
   });
 });
+
 
 //delete
 reviews.delete('/:id', (req, res) => {

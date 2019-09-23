@@ -11,7 +11,7 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 3003;
 const MONGODB_URI =
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/members';
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/members' || 'https://dashboard.heroku.com/apps/goodtomatoes-backend';
 
 //cors
 const whitelist = ['http://localhost:3000', 'http://good_tomatoes.surge.sh/'];
